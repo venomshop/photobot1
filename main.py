@@ -44,7 +44,6 @@ async def check_subscription(message: Message):
         print("Ошибка проверки подписки:", e)
         return False
 
-
 async def analyze_photo(image_bytes: bytes):
     image_base64 = base64.b64encode(image_bytes).decode("utf-8")
 
@@ -131,6 +130,7 @@ async def analyze_photo(image_bytes: bytes):
         return result["candidates"][0]["content"]["parts"][0]["text"]
     except (KeyError, IndexError):
         raise Exception(f"Неожиданный ответ Gemini: {result}")
+
 
 
 @dp.message(F.photo)
