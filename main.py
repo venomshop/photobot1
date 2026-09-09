@@ -18,8 +18,9 @@ CHANNEL_LINK = "https://t.me/ykm1nd"
 
 GEMINI_URL = (
     "https://generativelanguage.googleapis.com/v1beta/models/"
-    f"{os.environ.get('MODEL', 'gemini-2.5-flash')}:generateContent"
+    f"{os.environ.get('MODEL', 'gemini-3.6-flash')}:generateContent"
 )
+
 
 
 bot = Bot(BOT_TOKEN)
